@@ -1,8 +1,9 @@
 package main
 
-import "fmt"
-
-
+import (
+    "fmt"
+    "strings"
+)
 
 func main() {
     {
@@ -96,6 +97,61 @@ func main() {
         fmt.Println(s, len(s), cap(s))
         if s == nil {
             fmt.Println("nil!")
+        }
+    }
+
+    // Creating a slice with make
+    {
+        a := make([]int, 5)
+        printSlice(a)
+        // len=5 cap=5 [0 0 0 0 0]
+
+        b := make([]int, 0, 5)
+        printSlice(b)
+        // len=0 cap=5 []
+    }
+
+    {
+        a := [][]string{
+            []string{"1", "2", "3"},
+            []string{"4", "5", "6"},
+            []string{"7", "8", "9"},
+        }
+
+        for i := 0; i < len(a); i++ {
+            fmt.Printf("%s\n", strings.Join(a[i], " "))
+        }
+    }
+
+    // Appending to a slice
+    {
+        var s []int
+
+        s = append(s, 0)
+        printSlice(s)
+
+        s = append(s, 1, 2, 3)
+        printSlice(s)
+    }
+
+    // Range
+    {
+        var pow = []int{1, 2, 4, 8, 16, 32, 64, 128}
+
+        for i, v := range pow {
+            fmt.Printf("2**%d = %d\n", i, v)
+        }
+    }
+    {
+        // We can skip the index or value by assigning to _.
+        // If we only want the index, you can omit the second variable.
+        pow := make([]int, 10)
+        // for i, _ := range pow {
+        for i := range pow {
+            pow[i] = 1 << uint(i) // == 2**i
+        }
+        for _, value := range pow {
+            fmt.Printf("%d\n", value)
         }
     }
 }
