@@ -9,4 +9,6 @@ func main() {
     var name string
     fmt.Scanln(&name)
     fmt.Printf("Hi, %s! I'm Go!", name)
+
+    fmt.Println("Hello, 世界")
 }
