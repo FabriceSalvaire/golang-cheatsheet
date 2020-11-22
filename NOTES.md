@@ -1,39 +1,3 @@
-# Go
-
-https://golang.org
-
-Go is a statically typed, compiled programming language designed at Google by Robert Griesemer, Rob Pike, and Ken Thompson.
-
-Go was publicly announced in November 2009,[29] and version 1.0 was released in March 2012.
-
-## Trend
-
-From https://www.tiobe.com/tiobe-index
-
-*   1 C
-*   2 Python /
-*   3 Java \
-*   4 C++
-*   5     C# — @Microsoft
-*   6         Visual Basic — @Microsoft
-*   7 JavaScript
-*   8     PHP
-*   9         R
-*  10         SQL
-*  11     Groovy — @Java https://en.wikipedia.org/wiki/Apache_Groovy
-*  12         Perl
-*  13 Go /
-*  14     Swift — @Apple
-*  15 Ruby \
-*  16         ASM
-*  17         MATLAB
-*  18         Delphi — ~Pascal @Windows
-*  19     Objective-C — @Apple / @NextStep
-
-## Book
-
-* https://www.digitalocean.com/community/books/how-to-code-in-go-ebook
-
 # How to Run
 
 ```
